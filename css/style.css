@@ -1,14 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #9F9F9F;
+}
 /* top players style */
 .players{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-.player{
-    /* display: flex; */
+    grid-template-columns: repeat(3, 1fr);
 }
 .player img{
     height: 56px;
     width: 56px;
+}
+.player{
+    display: flex;
+    align-items: center;
 }
 
 
@@ -18,9 +25,6 @@
 .field:hover .bat{
     transform: rotate(-60deg);
     transform-origin: top right;
-}
-.field{
-    /* border: 1px solid; */
 }
 .ball{
     width: 50px;
