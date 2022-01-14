@@ -1,15 +1,14 @@
 /* top players style */
 .players{
     display: grid;
-    grid-template-columns: 1fx 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .player{
-    display: flex;
+    /* display: flex; */
 }
 .player img{
     height: 56px;
     width: 56px;
-    grid-;
 }
 
 
@@ -44,7 +43,6 @@
     width: 600px;
     height: 500px;
     background-color: lightslategray;
-
 }
 .box{
     width: 100px;
@@ -114,4 +112,47 @@
 .day{
     font-size: 2em;
     background-color: lightsteelblue;
+}
+
+/* photo */
+
+.photo-frame{
+    height: 200px;
+    width: 200px;
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    position: relative;
+    margin: 5px;
+    overflow: hidden;
+}
+.photo img{
+    width: 100%;
+    border-radius: 9px;
+}
+.photo-detial{
+    display: none;
+    position: absolute;
+    width: 200px;
+    top: 0;
+}
+.photo-frame:hover .photo-detial{
+    display: block;
+    background-color: rgba(218, 165, 32, 0.459);
+    height: 200px;
+}
+.photo-detial h3{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.photo-detial p{
+    color: white;
+}
+.photo-album{
+    display: flex;
+    flex-wrap: wrap;
+}
+.photo-frame:hover .photo{
+    transform: scale(1.3) rotate(90deg);
+    transition: transform 2s ease-in-out;
 }
