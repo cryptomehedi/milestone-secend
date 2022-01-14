@@ -1,0 +1,117 @@
+/* top players style */
+.players{
+    display: grid;
+    grid-template-columns: 1fx 1fr 1fr;
+}
+.player{
+    display: flex;
+}
+.player img{
+    height: 56px;
+    width: 56px;
+    grid-;
+}
+
+
+/*---------------
+    animation
+-----------------*/
+.field:hover .bat{
+    transform: rotate(-60deg);
+    transform-origin: top right;
+}
+.field{
+    /* border: 1px solid; */
+}
+.ball{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: brown;
+    position: relative;
+    left: 516px;
+    transition: transform 1s ease-out 0.2s;
+
+}
+.field:hover .ball{
+    transform: translate(900px, -200px);
+
+}
+.bat{
+    transition: transform 0.1s ease-in;
+}
+.stage{
+    width: 600px;
+    height: 500px;
+    background-color: lightslategray;
+
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: limegreen;
+    border-radius: 50px;
+    position: relative;
+    animation: sliding 5s ease-in-out  1s infinite alternate;
+    animation-play-state: running;
+}
+@keyframes sliding {
+    0%{
+        background-color: limegreen;
+        left: 0px;
+        top: 0px;
+    }
+    20%{
+        background-color: greenyellow;
+        /* left: 100px; */
+        top: 400px;
+    }
+    40%{
+        background-color: green;
+        /* left: 200px; */
+        top: 0px;
+    }
+    60%{
+        background-color: blue;
+        /* left: 300px; */
+        top: 400px;
+    }
+    80%{
+        background-color: greenyellow;
+        /* left: 400px; */
+        top: 0px;
+    }
+    100%{
+        background-color: blue;
+        left: 500px;
+        top: 400px;
+    }
+}
+
+    /* ----------
+    Calender 
+    --------*/
+
+.calender{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 2em repeat(5, 1fr);
+    grid-gap: 1em;
+    height: 500px;
+
+}
+.date, .day{
+    background-color: grey;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.other-months{
+    background-color: lightgray;
+}
+.day{
+    font-size: 2em;
+    background-color: lightsteelblue;
+}
